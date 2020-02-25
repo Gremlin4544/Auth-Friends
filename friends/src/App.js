@@ -1,14 +1,28 @@
 import React from 'react';
-
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <header className="App-header">
-        Friends
+        <h1>Friends</h1>
       </header>
+      <div>
+        <ul>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/protected">Protected Page</Link>
+          </li>
+        </ul>
+        <Route path="login" component={login} />
+        <PrivateRoute path="/protected" component={Protected} />
+      </div>
     </div>
+    </Router>
   );
 }
 
