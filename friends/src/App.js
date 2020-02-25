@@ -4,6 +4,7 @@ import './App.css';
 
 import PrivateRoute from './utils/PrivateRoute';
 import Login from './components/Login';
+import Friends from './components/Friends';
 
 function App() {
   return (
